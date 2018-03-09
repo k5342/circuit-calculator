@@ -1,0 +1,6 @@
+[package]
+name = "statisp"
+version = "0.1.0"
+authors = ["shinkwhek <shinkwhek@gmail.com>"]
+
+[dependencies]
