@@ -8,4 +8,4 @@
 
 + [Java](java/README-java.md)
 
-+ [Rust](/rust/README-rs.md)
++ [Rust](rust/README-rs.md)
