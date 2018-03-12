@@ -82,6 +82,7 @@ System.out.printf("gousei teikou: %f [ohm]\n", c.getResistance());
 #### 実行方法
 全ての .java ファイルをコンパイルした上で，`Main` クラスを実行する．
 ```
+% cd java
 % javac *.java
 % java Main
 ```
