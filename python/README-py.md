@@ -37,6 +37,8 @@
 
 直列に接続された素子の表現として、Cableの配列を内部に持つ
 
+インスタンスメソッド append() を持ち，引数として受け取った素子を直列に追加する．
+
 インターフェース `PartsBehavior` を実装し，各素子の抵抗値の和を合成抵抗の値として返却する関数 `getResistance()` をもつ．
 
 #### class ParallelCable
@@ -56,11 +58,21 @@
 http://www.asahi-net.or.jp/~jk2m-mrt/reidai_1.htm の例題 3 を解くプログラムを以下に示す．
 
 ```python
-pc2 = ParalleCable(Resistance(30.0), SerialCable([Resistance(15.0), 
-                                                  Resistance(15.0)]))
-pc1_right = SerialCable([Resistance(15.0), pc2])
-pc1 = ParalleCable(Resistance(30.0), pc1_right)
-c = SerialCable([Resistance(15.0), pc1])
+pc2 = ParallelCable(SerialCable(), SerialCable())
+pc2.getLeft().append(Resistance(30.0))
+pc2.getRight().append(Resistance(15.0))
+pc2.getRight().append(Resistance(15.0))
+
+pc1_right = SerialCable()
+pc1_right.append(Resistance(15.0))
+pc1_right.append(pc2)
+
+pc1 = ParallelCable(SerialCable(), pc1_right)
+pc1.getLeft().append(Resistance(30.0))
+
+c = SerialCable()
+c.append(Resistance(15.0))
+c.append(pc1)
 
 print("gousei teikou: %s [ohm]" % c.getResistance())
 ```
