@@ -8,6 +8,4 @@
 
 + [Java](java/README-java.md)
 
-+ [Python](python/README-py.md)
-
 + [Rust](rust/README-rs.md)
