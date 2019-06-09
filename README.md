@@ -6,8 +6,8 @@
 このプロジェクトではいくつかの言語による実装が用意されています. 以下のリンクから飛んでください.
 
 
-+ [Java](java/README-java.md)
++ [Java](java/README.md)
 
 + [Python](python/README.md)
 
-+ [Rust](rust/README-rs.md)
++ [Rust](rust/README.md)
